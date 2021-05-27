@@ -65,6 +65,15 @@ out the hostname, IP address, and port used by the microservice. The class expos
 used by the microservices to find their hostname, IP address, and port.
 
 
+# Link Api and Utils project
+
+We need to add the api and util projects as dependencies in our build.gradle file
+build.gradle:
+```
+dependencies {
+	implementation project(':api')
+	implementation project(':util')
+```
 
 ./gradlew bootRun
 
