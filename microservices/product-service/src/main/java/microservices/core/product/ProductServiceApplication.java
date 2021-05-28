@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan("util, api, microservices")
+@ComponentScan("{util, api, microservices}")
 public class ProductServiceApplication {
 
 	public static void main(String[] args) {
