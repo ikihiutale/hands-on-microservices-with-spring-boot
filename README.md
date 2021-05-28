@@ -75,7 +75,12 @@ dependencies {
 	implementation project(':util')
 ```
 
-./gradlew bootRun
+# Build & run product-service
+
+cd D:\ws\hands-on-microservices-with-spring-boot\microservices\product-service
+./gradlew build
+java -jar microservices/product-service/build/libs/*.jar &
+
 
 
 

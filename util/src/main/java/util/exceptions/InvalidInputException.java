@@ -1,7 +1,10 @@
 package util.exceptions;
 
 public class InvalidInputException extends RuntimeException {
-    public InvalidInputException() {
+
+	private static final long serialVersionUID = 1758587393641179176L;
+
+	public InvalidInputException() {
     }
 
     public InvalidInputException(String message) {
