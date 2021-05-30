@@ -88,6 +88,8 @@ microservices\product-service\build\libs> java -jar product-service-1.0.0-SNAPSH
 microservices\product-composite-service\build\libs> java -jar product-composite-service-1.0.0-SNAPSHOT.jar
 
 
+..or run all four on STS Spring Boot Dashboard at the same time...
+
 
 
 # 
