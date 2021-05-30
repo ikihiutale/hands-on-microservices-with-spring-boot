@@ -92,6 +92,7 @@ microservices\product-composite-service\build\libs> java -jar product-composite-
 
 
 
-# 
-spring init --boot-version=2.5.0.RELEASE --build=gradle --java-version=11 --packaging=jar --name=composite-product-service --package-name=microservices.composite.product --groupId=microservices.composite.product --version=1.0.0-SNAPSHOT composite-product-service
+# Test
+./gradlew test
+
 
