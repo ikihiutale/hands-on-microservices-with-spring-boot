@@ -6,13 +6,13 @@ If you want to learn more about the spring init CLI, you can run the spring hel
 To see what dependencies you can add, run the spring init --list command.
 
 
-spring init --boot-version=2.5.0.RELEASE --build=gradle --java-version=11 --packaging=jar --name=product-service --package-name=microservices.core.product --groupId=microservices.core.product --dependencies=actuator,webflux --version=1.0.0-SNAPSHOT product-service
+spring init --boot-version=2.5.0.RELEASE --build=gradle --java-version=11 --packaging=jar --name=product-service --package-name=foo.bar.microservices.core.product --groupId=foo.bar.microservices.core.product --dependencies=actuator,webflux --version=1.0.0-SNAPSHOT product-service
 
-spring init --boot-version=2.5.0.RELEASE --build=gradle --java-version=11 --packaging=jar --name=review-service --package-name=microservices.core.review --groupId=microservices.core.review --dependencies=actuator,webflux --version=1.0.0-SNAPSHOT review-service
+spring init --boot-version=2.5.0.RELEASE --build=gradle --java-version=11 --packaging=jar --name=review-service --package-name=foo.bar.microservices.core.review --groupId=foo.bar.microservices.core.review --dependencies=actuator,webflux --version=1.0.0-SNAPSHOT review-service
 
-spring init --boot-version=2.5.0.RELEASE --build=gradle --java-version=11 --packaging=jar --name=recommendation-service --package-name=microservices.core.recommendation --groupId=microservices.core.recommendation --dependencies=actuator,webflux --version=1.0.0-SNAPSHOT recommendation-service
+spring init --boot-version=2.5.0.RELEASE --build=gradle --java-version=11 --packaging=jar --name=recommendation-service --package-name=foo.bar.microservices.core.recommendation --groupId=foo.bar.microservices.core.recommendation --dependencies=actuator,webflux --version=1.0.0-SNAPSHOT recommendation-service
 
-spring init --boot-version=2.5.0.RELEASE --build=gradle --java-version=11 --packaging=jar --name=product-composite-service --package-name=microservices.composite.product --groupId=microservices.composite.product --dependencies=actuator,webflux --version=1.0.0-SNAPSHOT product-composite-service
+spring init --boot-version=2.5.0.RELEASE --build=gradle --java-version=11 --packaging=jar --name=product-composite-service --package-name=foo.bar.microservices.composite.product --groupId=foo.bar.microservices.composite.product --dependencies=actuator,webflux --version=1.0.0-SNAPSHOT product-composite-service
 
 # Buid
 
@@ -65,6 +65,8 @@ out the hostname, IP address, and port used by the microservice. The class expos
 used by the microservices to find their hostname, IP address, and port.
 
 
+spring init --boot-version=2.5.0.RELEASE --build=gradle --java-version=11 --packaging=jar --name=api --package-name=foo.bar.microservices.composite.product --groupId=foo.bar.microservices.composite.product --dependencies=actuator,webflux --version=1.0.0-SNAPSHOT product-composite-service
+
 # Link Api and Utils project
 
 We need to add the api and util projects as dependencies in our build.gradle file
@@ -79,7 +81,11 @@ dependencies {
 
 cd D:\ws\hands-on-microservices-with-spring-boot\microservices\product-service
 ./gradlew build
-java -jar microservices/product-service/build/libs/*.jar &
+
+microservices\recommendation-service\build\libs> java -jar recommendation-service-1.0.0-SNAPSHOT.jar
+microservices\review-service\build\libs> java -jar review-service-1.0.0-SNAPSHOT.jar
+microservices\product-service\build\libs> java -jar product-service-1.0.0-SNAPSHOT.jar
+microservices\product-composite-service\build\libs> java -jar product-composite-service-1.0.0-SNAPSHOT.jar
 
 
 

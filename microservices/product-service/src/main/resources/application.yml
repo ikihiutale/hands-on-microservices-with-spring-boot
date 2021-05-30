@@ -1,5 +1,7 @@
-server.port: 7001
-server.error.include-message: always
+server:
+  port: 7001
+  error:
+    include-message: always
 
 logging:
   level:
@@ -7,5 +9,7 @@ logging:
     microservices: DEBUG
 
 ---
-spring.profiles: docker
-server.port: 8080
+spring:
+  profiles: docker
+server:
+  port: 8080

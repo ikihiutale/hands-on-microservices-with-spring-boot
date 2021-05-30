@@ -2,11 +2,9 @@ plugins {
 	id 'org.springframework.boot' version '2.5.0'
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
-	id 'eclipse'
 }
 
-
-group = 'microservices.composite.product'
+group = 'foo.bar.microservices.composite.product'
 version = '1.0.0-SNAPSHOT'
 sourceCompatibility = '11'
 
@@ -15,7 +13,7 @@ repositories {
 }
 
 dependencies {
-    implementation project(':api')
+	implementation project(':api')
 	implementation project(':util')
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
 	implementation 'org.springframework.boot:spring-boot-starter-webflux'

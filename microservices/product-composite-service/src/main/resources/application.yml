@@ -1,5 +1,7 @@
-server.port: 7000
-server.error.include-message: always
+server:
+  port: 7000
+  error:
+    include-message: always
 
 app:
   product-service:
@@ -15,6 +17,4 @@ app:
 logging:
   level:
     root: INFO
-    microservices: DEBUG
-    api: DEBUG
-    util: DEBUG
+    foo.bar: DEBUG
