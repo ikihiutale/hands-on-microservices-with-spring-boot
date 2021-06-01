@@ -9,7 +9,11 @@ logging:
     foo.bar: DEBUG
 
 ---
-spring.profiles: docker
+#spring.profiles: docker
+spring:
+    config:
+        activate:
+            on-profile: docker
 
 server:
   port: 8080

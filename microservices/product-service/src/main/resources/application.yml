@@ -9,7 +9,11 @@ logging:
     microservices: DEBUG
 
 ---
+#spring.profiles: docker
 spring:
-  profiles: docker
+    config:
+        activate:
+            on-profile: docker
+            
 server:
   port: 8080
